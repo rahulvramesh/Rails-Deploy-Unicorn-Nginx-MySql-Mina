@@ -1,6 +1,6 @@
 root = "/home/ubuntu/example"
 working_directory root
-pid "#{root}/shared/pids/unicorn.pid""
+pid "#{root}/shared/pids/unicorn.pid"
 stderr_path "#{root}/shared/log/unicorn.stderr.log"
 stdout_path "#{root}/shared/log/unicorn.stdout.log"
 

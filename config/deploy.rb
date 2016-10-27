@@ -1,6 +1,7 @@
 require 'mina/rails'
 require 'mina/git'
 require 'mina/rbenv'  # for rbenv support. (https://rbenv.org)
+require 'mina/unicorn'
 # require 'mina/rvm'    # for rvm support. (https://rvm.io)
 
 # Basic settings:
@@ -13,7 +14,7 @@ set :domain, '35.162.50.27'
 set :deploy_to, '/home/ubuntu/example'
 set :repository, 'git@github.com:rahulvramesh/Rails-Deploy-Unicorn-Nginx-MySql-Mina.git'
 set :branch, 'master'
-
+set :shared_paths, ['/home/ubuntu/example/shared/sockets', '/home/ubuntu/example/shared/pids']
 # Optional settings:
 set :user, 'ubuntu'          # Username in the server to SSH to.
 #   set :port, '30000'           # SSH port number.
@@ -56,6 +57,9 @@ task :deploy do
     invoke :'deploy:cleanup'
 
     on :launch do
+      queue %[echo "-----> Ensuring unicorn will restart from #{deploy_to}/$release_path"]
+      queue %[cd "#{deploy_to}/$release_path"]
+      invoke :'unicorn:restart'
       in_path(fetch(:current_path)) do
         command %{mkdir -p tmp/}
         command %{touch tmp/restart.txt}
@@ -70,3 +74,5 @@ end
 # For help in making your deploy script, see the Mina documentation:
 #
 #  - https://github.com/mina-deploy/mina/docs
+
+
