@@ -14,7 +14,7 @@ set :domain, '35.162.50.27'
 set :deploy_to, '/home/ubuntu/example'
 set :repository, 'git@github.com:rahulvramesh/Rails-Deploy-Unicorn-Nginx-MySql-Mina.git'
 set :branch, 'master'
-set :shared_paths, ['/home/ubuntu/example/shared/sockets', '/home/ubuntu/example/shared/pids']
+#set :shared_paths, ['/home/ubuntu/example/shared/sockets', '/home/ubuntu/example/shared/pids']
 # Optional settings:
 set :user, 'ubuntu'          # Username in the server to SSH to.
 #   set :port, '30000'           # SSH port number.
