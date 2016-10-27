@@ -235,6 +235,16 @@ esac
 cat ~/.ssh/id_rsa.pub | ssh -p 22 username@123.123.123.123 'cat >> ~/.ssh/authorized_keys'
 
 
+#setting min
+
+gem install mina
+
+nano Gemfile
+
+gem 'mina'
+
+
+
 
 ##EC2 REF.
 http://askubuntu.com/questions/46424/adding-ssh-keys-to-authorized-keys
@@ -247,3 +257,6 @@ https://www.linode.com/docs/websites/ror/use-unicorn-and-nginx-on-ubuntu-14-04
 
 #for cap
 https://coderwall.com/p/yz8cha/deploying-rails-app-using-nginx-unicorn-postgres-and-capistrano-to-digital-ocean
+
+#mina
+https://www.digitalocean.com/community/tutorials/how-to-use-mina-to-deploy-a-ruby-on-rails-application
