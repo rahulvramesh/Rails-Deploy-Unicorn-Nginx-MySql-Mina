@@ -1,7 +1,7 @@
 require 'mina/rails'
 require 'mina/git'
 require 'mina/rbenv'  # for rbenv support. (https://rbenv.org)
-require 'mina/unicorn'
+#require 'mina/unicorn'
 # require 'mina/rvm'    # for rvm support. (https://rvm.io)
 
 # Basic settings:
@@ -57,9 +57,9 @@ task :deploy do
     invoke :'deploy:cleanup'
 
     on :launch do
-      queue %[echo "-----> Ensuring unicorn will restart from #{deploy_to}/$release_path"]
-      queue %[cd "#{deploy_to}/$release_path"]
-      invoke :'unicorn:restart'
+      #queue %[echo "-----> Ensuring unicorn will restart from #{deploy_to}/$release_path"]
+      #queue %[cd "#{deploy_to}/$release_path"]
+      #invoke :'unicorn:restart'
       in_path(fetch(:current_path)) do
         command %{mkdir -p tmp/}
         command %{touch tmp/restart.txt}

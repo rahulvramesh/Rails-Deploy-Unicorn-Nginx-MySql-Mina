@@ -28,9 +28,9 @@ gem 'unicorn'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem  'mina'
+gem  'mina', '~> 1.0'
 
-gem 'mina-unicorn', :require => false
+#gem 'mina-unicorn', :git => "git://github.com/scarfacedeb/mina-unicorn.git"
 
 
 # Use Capistrano for deployment

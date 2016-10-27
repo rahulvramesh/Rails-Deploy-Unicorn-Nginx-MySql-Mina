@@ -244,6 +244,11 @@ nano Gemfile
 gem 'mina'
 
 
+#gem adding unicorn supprot
+#if any issue
+bundle update
+
+
 
 
 ##EC2 REF.

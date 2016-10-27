@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/scarfacedeb/mina-unicorn.git
+  revision: 6806a7e8e5b9bb8046514dfde03c6bbb63f801a8
+  specs:
+    mina-unicorn (1.0.0)
+      mina (~> 1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -169,6 +176,7 @@ DEPENDENCIES
   jquery-rails
   listen (~> 3.0.5)
   mina (~> 1.0)
+  mina-unicorn!
   puma (~> 3.0)
   rails (~> 5.0.0, >= 5.0.0.1)
   sass-rails (~> 5.0)
