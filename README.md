@@ -161,7 +161,7 @@ TIMEOUT=${TIMEOUT-60}
 APP_ROOT=/home/ubuntu/example
 PID=$APP_ROOT/shared/pids/unicorn.pid
 CMD="cd $APP_ROOT; bundle exec unicorn -D -c $APP_ROOT/config/unicorn.rb -E development"
-AS_USER=root
+AS_USER=ubuntu
 set -u
 
 OLD_PIN="$PID.oldbin"
